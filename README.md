@@ -55,7 +55,7 @@ Esta aplicação é uma API desenvolvida em Flask que permite o registo de clien
 
 ### 1. **Registrar um Cliente**
 
-- **URL**: `POST http://127.0.0.1:5000/register_client`
+- **URL**: `POST http://127.0.0.1:5000/client/register_client`
 - **Descrição**: Registra um novo cliente.
 - **Cabeçalho**:
   ```json
@@ -98,7 +98,7 @@ Esta aplicação é uma API desenvolvida em Flask que permite o registo de clien
 
 ### 2. **Listar Clientes Registrados**
 
-- **URL**: `GET http://127.0.0.1:5000/data`
+- **URL**: `GET http://127.0.0.1:5000/client/get_all_clients`
 - **Descrição**: Retorna a lista de todos os clientes registrados.
 - **Resposta de Sucesso (200)**:
   ```json
