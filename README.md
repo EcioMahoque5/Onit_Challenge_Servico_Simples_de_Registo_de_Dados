@@ -47,7 +47,15 @@ Esta aplicação é uma API desenvolvida em Flask que permite o registo de clien
    - A aplicação será iniciada no endereço padrão: `http://127.0.0.1:5000`.
 
 5. **Testar as APIs**
-   - Use ferramentas como [Postman](https://www.postman.com/) ou [cURL](https://curl.se/) para testar os endpoints da API.
+   ### Ambiente Local
+
+- **Registrar Cliente**: `POST http://127.0.0.1:5000/client/register_client`
+- **Listar Clientes Registrados**: `GET http://127.0.0.1:5000/client/get_all_clients`
+
+### Ambiente Hospedado no Render
+
+- **Registrar Cliente**: `POST https://servico-simples-de-registo-de-dados-ecio.onrender.com/client/register_client`
+- **Listar Clientes Registrados**: `GET https://servico-simples-de-registo-de-dados-ecio.onrender.com/client/get_all_clients`
 
 ---
 
@@ -55,7 +63,9 @@ Esta aplicação é uma API desenvolvida em Flask que permite o registo de clien
 
 ### 1. **Registrar um Cliente**
 
-- **URL**: `POST http://127.0.0.1:5000/client/register_client`
+- **URL**:
+  - Local: `http://127.0.0.1:5000/client/register_client`
+  - Render: `https://servico-simples-de-registo-de-dados-ecio.onrender.com/client/register_client`
 - **Descrição**: Registra um novo cliente.
 - **Cabeçalho**:
   ```json
@@ -98,7 +108,9 @@ Esta aplicação é uma API desenvolvida em Flask que permite o registo de clien
 
 ### 2. **Listar Clientes Registrados**
 
-- **URL**: `GET http://127.0.0.1:5000/client/get_all_clients`
+- **URL**:
+  - Local: `http://127.0.0.1:5000/client/get_all_clients`
+  - Render: `https://servico-simples-de-registo-de-dados-ecio.onrender.com/client/get_all_clients`
 - **Descrição**: Retorna a lista de todos os clientes registrados.
 - **Resposta de Sucesso (200)**:
   ```json
@@ -141,10 +153,10 @@ Esta aplicação é uma API desenvolvida em Flask que permite o registo de clien
 ├── requirements.txt
 └── README.md
 
-
 ---
 
 ## Requisitos
+
 - Python 3.7+
 - Flask
 - Flask-WTF
@@ -153,6 +165,7 @@ Esta aplicação é uma API desenvolvida em Flask que permite o registo de clien
 ---
 
 ## Observações
+
 - Certifique-se de que a variável `SECRET_KEY` está configurada no arquivo `.env` antes de executar a aplicação.
 - Sempre ative o ambiente virtual antes de instalar os pacotes ou executar a aplicação:
   - **Windows**:
